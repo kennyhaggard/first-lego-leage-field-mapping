@@ -12,6 +12,7 @@ This is a simple script that relies on providing a JSON text file with a set of 
 1. **Zero Point Turns**: The robot's turns are centered at its midpoint. This may not always be accurate as wheelbases are typically offset.
 2. **Movement Timing**: Timing is not representative of the robot's actual speed; it only reflects the robot's path.
 3. **Accurate Turns**: The robot must turn accurately for the tool to be effective. This is best achieved by using the hub's yaw sensor. Implementation can be done in Python or block code.
+4. **Coordinate System**: (0,0) is the lower left corner of the robot when it is oriented at 90 degrees (pointedup). You might have to experiment with placements to get the hang of how I have it programed. 
 
 ## Mission Format
 

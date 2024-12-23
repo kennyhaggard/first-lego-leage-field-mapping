@@ -15,7 +15,7 @@ This is a simple script that relies on providing a JSON text file with a set of 
 
 ## Mission Format
 
-The tool requires missions to be provided in a specific JSON format. Below is an example:
+The tool requires missions to be provided in a specific JSON format. Below is an example, also in the repository there is a missions.json file with this code:
 
 ```json
 [

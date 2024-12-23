@@ -1,17 +1,23 @@
-# first-lego-leage-field-mapping
+# First Lego League Field Mapping
+
 A tool to plot paths for First Lego League
 
-Welcome! This tool is designed to help First Lego Leauge teams plan their movement across the field.
+Welcome! This tool is designed to help First Lego League teams plan their movement across the field.
 
-It's a simple script that relies on providing a json text file with a set of missions.
+## Overview
 
-It assumes a couple of things:
-1) Zero point turns at the center of the robot (likely not truly accurate as wheel bases are usually skewed towards one side of a robot)
-2) Movement timing is not true to speed, it is simply about where the robot goes.
-3) It does require your robot to accurately turn! This is best accomplished relying on the yaw of the hub. This can be achieved in python or block code.
+This is a simple script that relies on providing a JSON text file with a set of missions. The tool helps visualize and trace the robot's movement on the field based on the mission data.
 
-Here is what a mission looks like in JSON format:
-Any missions uploaded must be in this format!
+### Assumptions
+1. **Zero Point Turns**: The robot's turns are centered at its midpoint. This may not always be accurate as wheelbases are typically offset.
+2. **Movement Timing**: Timing is not representative of the robot's actual speed; it only reflects the robot's path.
+3. **Accurate Turns**: The robot must turn accurately for the tool to be effective. This is best achieved by using the hub's yaw sensor. Implementation can be done in Python or block code.
+
+## Mission Format
+
+The tool requires missions to be provided in a specific JSON format. Below is an example:
+
+```json
 [
     {
         "name": "Mission 1",
@@ -20,14 +26,14 @@ Any missions uploaded must be in this format!
         "startAngle": 90,
         "robotWidthCm": 30,
         "robotHeightCm": 13,
-	"traceColor": "green",
+        "traceColor": "green",
         "actions": [
-            { "type": "move", "value": 17},
+            { "type": "move", "value": 17 },
             { "type": "rotate", "value": -24 },
             { "type": "move", "value": 30 },
             { "type": "move", "value": -30 },
             { "type": "rotate", "value": 24 },
-	    { "type": "move", "value": -17}
+            { "type": "move", "value": -17 }
         ]
     },
     {
@@ -37,7 +43,7 @@ Any missions uploaded must be in this format!
         "startAngle": 0,
         "robotWidthCm": 30,
         "robotHeightCm": 12,
-	"traceColor":"red",
+        "traceColor": "red",
         "actions": [
             { "type": "move", "value": 50 },
             { "type": "rotate", "value": 90 },
@@ -51,7 +57,7 @@ Any missions uploaded must be in this format!
         "startAngle": 180,
         "robotWidthCm": 10,
         "robotHeightCm": 12,
-	"traceColor": "yellow",
+        "traceColor": "yellow",
         "actions": [
             { "type": "move", "value": 50 },
             { "type": "rotate", "value": -90 },
@@ -65,13 +71,12 @@ Any missions uploaded must be in this format!
         "startAngle": 180,
         "robotWidthCm": 10,
         "robotHeightCm": 12,
-	"traceColor":"blue",
+        "traceColor": "blue",
         "actions": [
             { "type": "move", "value": 50 },
             { "type": "rotate", "value": -90 },
             { "type": "move", "value": 10 }
-	]
-        
+        ]
     },
     {
         "name": "Mission 5",
@@ -80,13 +85,12 @@ Any missions uploaded must be in this format!
         "startAngle": 180,
         "robotWidthCm": 10,
         "robotHeightCm": 12,
-	"traceColor":"purple",
+        "traceColor": "purple",
         "actions": [
             { "type": "move", "value": 50 },
             { "type": "rotate", "value": -90 },
             { "type": "move", "value": 10 }
-	]        
+        ]
     }
 ]
-
-Good luck and have fun!
+```
